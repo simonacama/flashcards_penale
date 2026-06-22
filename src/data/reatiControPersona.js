@@ -1,8 +1,10 @@
+import extraQuizBank from './extraQuizBank.js';
+
 export const studyModules = [
   {
     "id": "reati-contro-persona",
-    "title": "Reati contro la persona",
-    "sourceFile": "reati contro persona.docx",
+    "title": "Diritto penale - parte speciale",
+    "sourceFile": "reati contro persona.docx; Parte speciale 1.pdf; Parte speciale 2.pdf; Parte speciale 3.pdf",
     "fullSourceData": "src/data/reatiControPersonaSource.json",
     "importedOn": "2026-06-19",
     "sections": [
@@ -76,12 +78,52 @@ export const studyModules = [
           "Omissione di soccorso ex art. 593.",
           "Rissa ex art. 588."
         ]
+      },
+      {
+        "id": "pubblica-amministrazione",
+        "title": "Delitti contro la pubblica amministrazione",
+        "topics": [
+          "Qualifiche soggettive: pubblico ufficiale, incaricato di pubblico servizio, esercente un servizio di pubblica necessità e art. 360.",
+          "Peculato, peculato d'uso, indebita destinazione, peculato mediante profitto dell'errore altrui, malversazione e indebita percezione.",
+          "Concussione, induzione indebita, corruzione per funzione, corruzione propria, corruzione in atti giudiziari, istigazione e traffico di influenze.",
+          "Violenza, resistenza, oltraggio, interruzione di servizio, esercizio abusivo di professione e usurpazione di funzioni."
+        ]
+      },
+      {
+        "id": "amministrazione-giustizia-ordine",
+        "title": "Giustizia e ordine pubblico",
+        "topics": [
+          "Omissione di denuncia o referto, simulazione di reato, calunnia, autocalunnia e falso giuramento.",
+          "False informazioni, false dichiarazioni, frode processuale, depistaggio, falsa testimonianza, intralcio e favoreggiamento.",
+          "Evasione, comunicazioni dei detenuti, esercizio arbitrario delle proprie ragioni, istigazione, associazione per delinquere e associazione mafiosa.",
+          "Scambio elettorale politico-mafioso, rivolta in istituto penitenziario, devastazione e saccheggio."
+        ]
+      },
+      {
+        "id": "incolumita-ambiente-fede",
+        "title": "Incolumità pubblica, ambiente e fede pubblica",
+        "topics": [
+          "Strage, incendio, incendio boschivo, disastro, materie esplodenti, cautele sul lavoro, epidemia e alimenti nocivi.",
+          "Inquinamento ambientale, disastro ambientale, materiale radioattivo, omessa bonifica e traffico illecito organizzato di rifiuti.",
+          "Falsità in monete, marchi, segni distintivi, prodotti con segni falsi, atti pubblici, copie autentiche e attestati.",
+          "Falsità personale, sostituzione di persona, false attestazioni e uso di atto falso."
+        ]
+      },
+      {
+        "id": "patrimonio-cultura-famiglia",
+        "title": "Patrimonio, cultura, famiglia e altri titoli",
+        "topics": [
+          "Furto, furto in abitazione, furto con strappo, rapina, estorsione, sequestro estorsivo e occupazione arbitraria.",
+          "Truffa, frode informatica, insolvenza fraudolenta, usura, appropriazione indebita, ricettazione, riciclaggio e autoriciclaggio.",
+          "Patrimonio culturale: furto, appropriazione, ricettazione, riciclaggio, importazione, esportazione e contraffazione di opere d'arte.",
+          "Religione, moralità pubblica, delitti contro gli animali e delitti contro la famiglia."
+        ]
       }
     ]
   }
 ];
 
-export const quizBank = [
+const baseQuizBank = [
   {
     "id": "q001",
     "topic": "Omicidio",
@@ -1283,3 +1325,5 @@ export const quizBank = [
     "answer": "Violenta mischia tra almeno tre persone con intento di offesa e difesa; assorbe le percosse ma concorre con i reati commessi durante la rissa"
   }
 ];
+
+export const quizBank = [...baseQuizBank, ...extraQuizBank];
